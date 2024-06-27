@@ -1,0 +1,15 @@
+bison parser.y -d &&
+flex scanner.fl &&
+gcc -o acqua lex.yy.c parser.tab.c SymbolTable/symboltable.c SymbolTable/dati.c &&
+echo "###### OUTPUT FILE 1 #######"
+./acqua input/input1.txt
+echo $'\n###### OUTPUT FILE 2 #######'
+./acqua input/input2.txt
+echo $'\n###### OUTPUT FILE 3 #######'
+./acqua input/input3.txt
+echo $'\n###### OUTPUT FILE 4 #######'
+./acqua input/input4.txt
+echo $'\n###### OUTPUT FILE 5 #######'
+./acqua input/input5.txt
+echo $'\n###### OUTPUT FILE 6 #######'
+./acqua input/input6.txt

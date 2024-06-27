@@ -1,0 +1,9 @@
+bison.exe parser.y -d
+flex.exe scanner.fl
+gcc.exe -o acqua lex.yy.c parser.tab.c SymbolTable/symboltable.c SymbolTable/dati.c
+acqua.exe input/input1.txt 
+acqua.exe input/input2.txt
+acqua.exe input/input3.txt
+acqua.exe input/input4.txt
+acqua.exe input/input5.txt
+acqua.exe input/input6.txt
